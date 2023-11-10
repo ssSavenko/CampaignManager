@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampaignManager", "CampaignManager\CampaignManager.csproj", "{0B769DC2-D176-4B6D-B629-EAEF9273ECD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{CBF6506C-AFC1-4E46-80B6-8DF7136D50DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B769DC2-D176-4B6D-B629-EAEF9273ECD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B769DC2-D176-4B6D-B629-EAEF9273ECD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B769DC2-D176-4B6D-B629-EAEF9273ECD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B769DC2-D176-4B6D-B629-EAEF9273ECD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF6506C-AFC1-4E46-80B6-8DF7136D50DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF6506C-AFC1-4E46-80B6-8DF7136D50DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF6506C-AFC1-4E46-80B6-8DF7136D50DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF6506C-AFC1-4E46-80B6-8DF7136D50DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B890E172-F0CD-4CE0-BFB0-2A68E7D5F65B}
+	EndGlobalSection
+EndGlobal
