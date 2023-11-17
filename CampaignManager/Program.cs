@@ -1,7 +1,6 @@
-using CampaignManager.Helpers;
+using CampaignManager.Services;
 using DB;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore; 
 
 var builder = WebApplication.CreateBuilder(args);
 

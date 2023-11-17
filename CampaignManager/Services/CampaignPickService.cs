@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace CampaignManager.Helpers
+namespace CampaignManager.Services
 {
     public interface ICampaignPickService
     {

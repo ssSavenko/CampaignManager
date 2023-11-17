@@ -4,7 +4,7 @@ using DB.Models;
 using DB.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 
-namespace CampaignManager.Helpers
+namespace CampaignManager.Services
 {
     public interface ICampaignConditionsService
     {

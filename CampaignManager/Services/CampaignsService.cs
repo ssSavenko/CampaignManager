@@ -3,7 +3,7 @@ using DB;
 using DB.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CampaignManager.Helpers
+namespace CampaignManager.Services
 {
 
     public interface ICampaignsService

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Text;
 
-namespace CampaignManager.Helpers
+namespace CampaignManager.Services
 {
     public interface IResultSaverService
     {

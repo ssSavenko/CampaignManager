@@ -9,7 +9,7 @@ using System.IO;
 using System.Text;
 using System.Text.Json.Nodes;
 
-namespace CampaignManager.Helpers
+namespace CampaignManager.Services
 {
     public interface ISheduleComposeService
     { 
