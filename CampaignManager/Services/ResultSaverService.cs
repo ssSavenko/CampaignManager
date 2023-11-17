@@ -10,7 +10,7 @@ namespace CampaignManager.Services
 
     public class ResultSaverService : IResultSaverService
     {
-        private string resultFile = "ResultSchedule.json";
+        private string resultFile = "sends.json";
         private Object fileWriteSyncObject = new Object();
 
         public async Task  SaveToFile(string dataToSave)
