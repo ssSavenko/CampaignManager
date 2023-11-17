@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CampaignManager.Helpers
 {
 
-    public interface ICampaignsHelper
+    public interface ICampaignsService
     {
         public Task<Campaign> AddCampaign(CampaignInputData campaign);
         public Task<Campaign> GetCampaign(int id);
@@ -15,10 +15,10 @@ namespace CampaignManager.Helpers
         public Task<bool> UpdateCampaign(CampaignInputDataExtended campaign);
     }
 
-    public class CampaignsHelper : ICampaignsHelper
+    public class CampaignsService : ICampaignsService
     {
         private CampaignManagerContext dbContext;
-        public CampaignsHelper(CampaignManagerContext dbContext)
+        public CampaignsService(CampaignManagerContext dbContext)
         {
             this.dbContext = dbContext;
         }

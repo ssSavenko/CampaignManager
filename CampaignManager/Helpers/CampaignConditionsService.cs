@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CampaignManager.Helpers
 {
-    public interface ICampaignConditionsHelper
+    public interface ICampaignConditionsService
     {
         Task<CampaignCondition> AddCampaignCondition(CampaignConditionInputData campaignCondition);
         Task<List<CampaignCondition>> GetCampaignConditionsByCampaignId(int campaignId);
@@ -14,12 +14,12 @@ namespace CampaignManager.Helpers
         Task<bool> RemoveCondition(int conditionId); 
     }
 
-    public class CampaignConditionsHelper : ICampaignConditionsHelper
+    public class CampaignConditionsService : ICampaignConditionsService
     {
         private CampaignManagerContext dbContext;
 
-        private ICampaignsHelper campaignHelper;
-        public CampaignConditionsHelper(CampaignManagerContext dbContext, ICampaignsHelper campaignHelper)
+        private ICampaignsService campaignHelper;
+        public CampaignConditionsService(CampaignManagerContext dbContext, ICampaignsService campaignHelper)
         {
             this.dbContext = dbContext;
             this.campaignHelper = campaignHelper;

@@ -14,10 +14,10 @@ namespace CampaignManager.Controllers
     [Route("[controller]")]
     public class CampaignsController : ControllerBase
     {
-        private ICampaignsHelper campaignHelper;
-        private ICampaignConditionsHelper campaignConditionsHelper;
-        private ISheduleHelper sheduleHelper;
-        public CampaignsController(ICampaignsHelper campaignHelper, ICampaignConditionsHelper campaignConditionsHelper, ISheduleHelper sheduleHelper)
+        private ICampaignsService campaignHelper;
+        private ICampaignConditionsService campaignConditionsHelper;
+        private ISheduleComposeService sheduleHelper;
+        public CampaignsController(ICampaignsService campaignHelper, ICampaignConditionsService campaignConditionsHelper, ISheduleComposeService sheduleHelper)
         {
             this.campaignHelper = campaignHelper;
             this.campaignConditionsHelper = campaignConditionsHelper;
@@ -63,15 +63,11 @@ namespace CampaignManager.Controllers
         }
 
 
-
-
         [HttpGet, Route("schedule")]
         public async Task<IActionResult> GetScheduledCampaigns()
         {
-            var schedule = (await sheduleHelper.SheduleCampaigns());
-            string json = JsonConvert.SerializeObject(schedule);
-
-            return Ok(json);
+            var schedule = (await sheduleHelper.SheduleCustomerToCampaigns()); 
+            return Ok(JsonConvert.SerializeObject(schedule));
         }
 
     }

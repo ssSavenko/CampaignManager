@@ -9,8 +9,8 @@ namespace CampaignManager.Controllers
     [Route("[controller]")]
     public class CampaignConditionsController : ControllerBase
     {
-        private ICampaignConditionsHelper campaignConditionsHelper;
-        public CampaignConditionsController(ICampaignConditionsHelper campaignConditionsHelper)
+        private ICampaignConditionsService campaignConditionsHelper;
+        public CampaignConditionsController(ICampaignConditionsService campaignConditionsHelper)
         {
             this.campaignConditionsHelper = campaignConditionsHelper;
         }

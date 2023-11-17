@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CampaignManager.Helpers
 {
-    public interface ITemplatesHelper
+    public interface ITemplatesService
     {
         Task<IList<Template>> GetTemplates();
     } 
 
-    public class TemplatesHelper : ITemplatesHelper
+    public class TemplatesService : ITemplatesService
     {
         private CampaignManagerContext dbContext;
-        public TemplatesHelper(CampaignManagerContext dbContext)
+        public TemplatesService(CampaignManagerContext dbContext)
         {
             this.dbContext = dbContext;
         } 

@@ -15,11 +15,19 @@ builder.Services.AddSwaggerGen();
  
 builder.Services.AddDbContext<CampaignManagerContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddTransient<ICampaignsHelper, CampaignsHelper>();
-builder.Services.AddTransient<ITemplatesHelper, TemplatesHelper>();
-builder.Services.AddTransient<ICampaignConditionsHelper, CampaignConditionsHelper>();
-builder.Services.AddTransient<ISheduleHelper, SheduleHelper>();
+var dbOptions = new DbContextOptionsBuilder<CampaignManagerContext>()
+    .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    .Options;
 
+builder.Services.AddSingleton(ctx => new Func<CampaignManagerContext>(() => new CampaignManagerContext(dbOptions)));
+builder.Services.AddTransient<ICampaignsService, CampaignsService>();
+builder.Services.AddTransient<ITemplatesService, TemplatesService>();
+builder.Services.AddTransient<ICampaignConditionsService, CampaignConditionsService>();
+builder.Services.AddTransient<ISheduleComposeService, SheduleComposeService>();
+builder.Services.AddTransient<ICampaignPickService, CampaignPickService>();
+
+
+builder.Services.AddSingleton<IResultSaverService, ResultSaverService>();
 
 var app = builder.Build();
 

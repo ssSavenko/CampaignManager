@@ -7,8 +7,8 @@ namespace CampaignManager.Controllers
     [Route("[controller]")]
     public class TemplatesController : ControllerBase
     { 
-        private ITemplatesHelper templateHelper;
-        public TemplatesController(ITemplatesHelper templateHelper)
+        private ITemplatesService templateHelper;
+        public TemplatesController(ITemplatesService templateHelper)
         {
             this.templateHelper = templateHelper;
         }
